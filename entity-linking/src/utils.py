@@ -117,9 +117,9 @@ def read_docred(path) -> dict:
         dict: docred dataset
     """
     return {
-        'dev': read_docred(f'{path}/dev.json'),
-        'test': read_docred(f'{path}/test.json'),
-        'train_annotated': read_docred(f'{path}/train_annotated.json')
+        'dev': read_docred_file(f'{path}/dev.json'),
+        'test': read_docred_file(f'{path}/test.json'),
+        'train_annotated': read_docred_file(f'{path}/train_annotated.json')
     }
 
 

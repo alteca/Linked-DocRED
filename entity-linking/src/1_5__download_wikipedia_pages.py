@@ -1,7 +1,7 @@
-"""Download wikipedia pages and title
+"""Download wikipedia pages and titles
 Input: 1_matched_docred.jsonl
 Output: Folder 1_wikipedia_pages
-        1_articles_title.jsonl
+        1_articles_titles.jsonl
 """
 import json
 import os
@@ -98,10 +98,10 @@ def get_articles_names():
     docred['names'] = docred['resource'].apply(
         lambda r: list(names[r]) if r in names else [])
     docred[['resource', 'names']].to_json(
-        f'{EL_DATA_PATH}/1_articles_title.jsonl', orient='records', lines=True)
+        f'{EL_DATA_PATH}/1_articles_titles.jsonl', orient='records', lines=True)
 
     names = {res: list(n) for res, n in names.items()}
-    with open(f'{EL_DATA_PATH}/1_articles_title.json', 'w', encoding='utf-8') as f:
+    with open(f'{EL_DATA_PATH}/1_articles_titles.json', 'w', encoding='utf-8') as f:
         json.dump(names, f)
 
 
@@ -109,5 +109,5 @@ if __name__ == "__main__":
     print("--- Download Wikipedia pages")
     download_wikipedia_pages()
 
-    print("--- Get Wikipedia pages name")
+    print("--- Get Wikipedia pages names")
     get_articles_names()
