@@ -1,0 +1,4 @@
+python-dotenv==0.21.1
+elasticsearch==8.6.1
+python-Levenshtein==0.20.9
+tqdm==4.64.1
