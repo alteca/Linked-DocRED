@@ -8,4 +8,4 @@ The user shall execute the modules in the following order:
 * ATLOP (Relation Extraction),
 * Entity-Linking.
 
-*Warning: Each module has its own Python version and environment. The user shall install each environment separatly.*
+*Warning: Each module has its own Python version and environment. The user shall install each environment separately.*

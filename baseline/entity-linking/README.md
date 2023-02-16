@@ -15,3 +15,16 @@ Install the packages listed in `requirements.txt`:
 ```bash
 python3 -m pip install -r requirements.txt
 ```
+
+## Prediction
+
+To predict entity-linking, run the following command:
+
+```bash
+python3 predict.py --input_file "$LINKED_DOCRED_FILE" --output_file "$SAVE_PATH" --method "$METHOD"
+```
+
+where
+* `$LINKED_DOCRED_FILE`: file in the format of Linked-DocRED to predict,
+* `$SAVE_PATH`: path to save predictions,
+* `$METHOD`: method to use (`wikipedia` or `wikidata`)
