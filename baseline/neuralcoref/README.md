@@ -15,7 +15,7 @@ It is **mandatory** to have Python <= 3.6, in order to install `spaCy` v2.1, whi
 Install the packages listed in `requirements.txt`:
 
 ```bash
-python3 -m pip install -r requirements.tx
+python3 -m pip install -r requirements.txt
 ```
 
 Download spaCy model, using the following command

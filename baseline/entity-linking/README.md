@@ -8,10 +8,10 @@ PURE and NeuralCoref have been trained and have made predictions on the `dev` sp
 
 ## Installation
 
-We have tested the installation with Python 3.7.12.
+We have tested the installation with Python 3.9.15.
 
 Install the packages listed in `requirements.txt`:
 
 ```bash
-python3 -m pip install -r requirements.tx
+python3 -m pip install -r requirements.txt
 ```

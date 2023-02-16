@@ -9,7 +9,7 @@ We have tested the installation with Python 3.7.12.
 Install the packages listed in `requirements.txt`:
 
 ```bash
-python3 -m pip install -r requirements.tx
+python3 -m pip install -r requirements.txt
 ```
 
 ## Preliminary step

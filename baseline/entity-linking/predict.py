@@ -136,7 +136,7 @@ def main(linked_docred_file: str, method: str, output_file: str):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog='Entity-Linking with Wikipedia/Wikidata')
-    parser.add_argument('--input_file', help='Path do Linked-DocRED file to disambiguate',
+    parser.add_argument('--input_file', help='Path to Linked-DocRED file to disambiguate',
                         type=str, required=True)
     parser.add_argument('--method', help='Method to use to disambiguate', choices=['wikipedia', 'wikidata'],
                         type=str, required=True)
