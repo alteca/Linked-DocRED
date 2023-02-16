@@ -11,15 +11,15 @@ Information Extraction (IE) pipelines aim to extract meaningful entities and rel
 Therefore, we propose **Linked-DocRED**, to the best of our knowledge, the first manually-annotated, large-scale, document-level IE dataset.
 We enhance the existing and widely-used DocRED *[[1]](#cite-1)* dataset with entity-linking labels that are generated thanks to a semi-automatic process that guarantees high-quality annotations. In particular, we use hyperlinks in Wikipedia articles to provide disambiguation candidates. *The dataset is located in the Linked-DocRED folder (see [Linked-DocRED](Linked-DocRED/). The source code for the disambiguation is accessibe at [Disambiguation Process](entity-linking/)*.
 
-We also propose a complete framework of metrics to benchmark end-to-end IE pipelines, and we define an entity-centric metric to evaluate entity-linking *(see [Metrics](Linked-DocRED/))*.
+We also propose a complete framework of metrics to benchmark end-to-end IE pipelines, and we define an entity-centric metric to evaluate entity-linking *(see [Metrics](metrics/))*.
 
-The evaluation of a baseline shows promising results while highlighting the challenges of an end-to-end IE pipeline *(see [Baseline](Linked-DocRED/))*.
+The evaluation of a baseline shows promising results while highlighting the challenges of an end-to-end IE pipeline *(see [Baseline](baseline/))*.
 
 ## Table of contents
 
 * [Linked-DocRED data and format](Linked-DocRED/)
-* [Baseline](baseline/)
 * [Metrics](metrics/)
+* [Baseline](baseline/)
 * [DocRED disambiguation process](entity-linking/)
 
 ## Contact
