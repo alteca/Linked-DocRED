@@ -1,0 +1,36 @@
+<View style="display: flex;">
+    <View style="flex: 40%;">
+        <Header name="title" value="$title"/>
+        <View style="display: flex; gap: 5px;">
+            <Text name="dataset" value="$dataset"/>
+            <Text name="id" value="$id"/>
+        </View>
+        <Hypertext name="instance_text" value="$html_text"/>
+        <Hypertext name="legend" value="$legend"/>
+        <View style="width: 60%; height: 0; border: 1px solid #C4C4C4; margin: 3px; display: inline-block;"/>
+        <View name="disambiguated" style="overflow-y: scroll; height: 300px; background-color: white; -webkit-box-shadow: inset 5px 5px 4px -2px rgba(0,0,0,0.49); box-shadow: inset 5px 5px 4px -2px rgba(0,0,0,0.49);">
+        <Repeater on="$disambiguated" indexFlag="{{d_id}}" mode="list">
+            <Hypertext name="disambiguated_{{d_id}}" value="$disambiguated[{{d_id}}].html"/>
+        </Repeater>
+        </View>
+    </View>
+    <View style="flex: 60%; overflow-y: scroll; height: 700px; padding: 10px;">
+        <Repeater on="$to_disambiguate" indexFlag="{{t_id}}" mode="list">
+        <View name="to_disambiguate_{{t_id}}" style="background-color:white; box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+            <Hypertext name="to_disambiguate_html_{{t_id}}" value="$to_disambiguate[{{t_id}}].html"/>
+            <Choices name="resource_{{t_id}}" toName="to_disambiguate_{{t_id}}" choice="single" showInLine="true">
+                <Repeater on="$to_disambiguate[{{t_id}}].candidates" indexFlag="{{c_id}}" mode="list">
+                    <Choice alias="to_disambiguate_{{t_id}}_{{c_id}}" value="$to_disambiguate[{{t_id}}].candidates[{{c_id}}].text"/>
+                </Repeater>
+                <Choice value="Title"/>
+                <Choice value="Does not exist"/>
+            </Choices>
+            <Text name="label_{{t_id}}" text="Other"/>
+            <Textarea name="resource_area_{{t_id}}" editable="true" maxSubmissions="1" toName="to_disambiguate_{{t_id}}"/>
+        </View>
+        </Repeater>
+        <View style="width: 60%; height: 0; border: 1px solid #C4C4C4; margin: 3px; display: inline-block;"/>
+        <Header name="error_label" value="Comment if any error"/>
+        <Textarea name="error" editable="true" maxSubmissions="1" toName="title" rows="2"/>
+    </View>
+</View>

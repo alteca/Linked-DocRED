@@ -18,8 +18,6 @@ DOCRED_PATH = os.getenv('DOCRED_PATH')
 EL_DATA_PATH = os.getenv('EL_DATA_PATH')
 
 docred = read_docred(DOCRED_PATH)
-articles_names = None
-hits = None
 
 edit_regex = re.compile(r'.*wikipedia.org.*?title=(.*)&.*')
 
@@ -300,12 +298,13 @@ def needleman_wunsch_alignment(docred_text: str, wikipedia_text: str) -> tuple:
     return docred_to_wiki, wiki_to_docred, similarity
 
 
-def disambiguate_instance(docred_instance: dict, hit_instance: dict):
+def disambiguate_instance(docred_instance: dict, hit_instance: dict, articles_names: dict):
     """Main function to disambiguate instance
 
     Args:
         docred_instance (dict): docred instance
         hit_instance (dict): match information (which wikipedia page to get)
+        articles_names (dict): title of the Wikipedia articles
     """
     try:
         wiki_abstract_text, wiki_abstract_links, wiki_all_links = get_wiki_page(
@@ -339,8 +338,7 @@ def disambiguate_instance(docred_instance: dict, hit_instance: dict):
                 if wiki_start is not None and wiki_start < mention_end and \
                         (wiki_end is None or wiki_end > mention_start):
                     docred_text = mention['name']
-                    wiki_text = wiki_abstract_text[wiki_ent['start']
-                        :wiki_ent['end']]
+                    wiki_text = wiki_abstract_text[wiki_ent['start']:wiki_ent['end']]
                     text_sim = text_similarity(docred_text, wiki_text)
 
                     if text_sim > 0.75:
@@ -402,19 +400,19 @@ def disambiguate_instance(docred_instance: dict, hit_instance: dict):
                     'url': hit_instance['resource'],
                     'matcher': 'article-name'
                 }
-    
+
     # Merge mention-level alignement
     for entity in docred_instance['vertexSet']:
         resource = None
         matcher = None
-        for mention in entity:
+        for i, mention in enumerate(entity):
             if mention['resource'] is not None:
                 m_res = mention['resource']
-                
+
                 if m_res['matcher'] == 'text-alignment' and m_res['matcher'] != matcher:
                     resource = m_res['url']
                     matcher = m_res['matcher']
-                    
+
                 elif m_res['matcher'] == 'coreference' and m_res['matcher'] != matcher:
                     pot_resource = int(m_res['coref'].split("-")[0])
                     if pot_resource is not None and pot_resource != i:
@@ -431,20 +429,29 @@ def disambiguate_instance(docred_instance: dict, hit_instance: dict):
                 elif m_res['matcher'] == 'article-title' and m_res['matcher'] != matcher:
                     resource = m_res['url']
                     matcher = m_res['matcher']
-        
-        entity['entity_linking'] = {
-            'wikipedia_resource': resource,
-            'method': matcher
+
+        entity = {
+            'entity_linking':  {
+                'wikipedia_resource': resource,
+                'method': matcher
+            },
+            'mentions': entity,
+            'type': entity[0]['type']
         }
-        for mention in entity:
+        for mention in entity['mentions']:
             if 'resource' in mention:
                 del mention['resource']
+                
+        if entity['type'] in ['NUM', 'TIME']:
+            entity['entity_linking'] = {
+                'wikipedia_resource': '#ignored#',
+                'method': 'num/time'
+            }
 
     output = {
         'dataset': hit_instance['dataset'],
         'id': hit_instance['id'],
-        'vertexSet': docred_instance['vertexSet'],
-        'text_similarity': similarity
+        'entities': docred_instance['vertexSet']
     }
     return output
 
@@ -452,9 +459,6 @@ def disambiguate_instance(docred_instance: dict, hit_instance: dict):
 def main():
     """Main Entrypoint
     """
-    global hits
-    global articles_names
-
     hits = pd.read_json(
         f"{EL_DATA_PATH}/1_matched_docred.jsonl", lines=True, orient="records")
 
@@ -462,10 +466,15 @@ def main():
         f'{EL_DATA_PATH}/1_articles_titles.jsonl', lines=True, orient="records")
     articles_names = articles_names.set_index('resource')
 
-    with open(f'{EL_DATA_PATH}/3_hyperlinks_alignment_links_in_page.jsonl', 'w', encoding='utf-8') as f:
+    with open(f'{EL_DATA_PATH}/3_hyperlinks_alignment_links_in_page.jsonl', 'w', encoding='utf-8') \
+        as f:
         for _, r in tqdm(hits.iterrows(), total=len(hits)):
             docred_instance = docred[r['dataset']][r['id']]
-            disambiguate_instance(docred_instance, r, f)
+            instance = disambiguate_instance(
+                docred_instance, r, articles_names)
+            f.write(json.dumps(instance))
+            f.write('\n')
+            f.flush()
 
 
 if __name__ == "__main__":

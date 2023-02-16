@@ -1,16 +1,16 @@
 <View>
-  <Text name="text" value="$text"/>
-  <Hypertext name="hpt" value="$wiki_url"/>
-  <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
-    <Header value="Choose the right resource"/>
-    <Choices name="resource" toName="text" choice="single" showInLine="false">
-      <Choice alias="True" value="$resource"/>
-      <Choice alias="$candidate_0_alias" value="$candidate_0"/>
-      <Choice alias="$candidate_1_alias" value="$candidate_1"/>
-      <Choice alias="$candidate_2_alias" value="$candidate_2"/>
-      <Choice alias="$candidate_3_alias" value="$candidate_3"/>
-      <Choice alias="$candidate_4_alias" value="$candidate_4"/>
-    </Choices>
-    <Textarea name="resource_url" editable="true" maxSubmissions="1" showSubmitButton="true" toName="resource"/>
-  </View>
+    <Text name="text" value="$text"/>
+    <Hypertext name="hpt" value="$wiki_url"/>
+    <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+        <Header value="Choose the right resource"/>
+        <Choices name="resource" toName="text" choice="single" showInLine="false">
+            <Choice alias="True" value="$resource"/>
+            <Choice alias="$candidate_0_alias" value="$candidate_0"/>
+            <Choice alias="$candidate_1_alias" value="$candidate_1"/>
+            <Choice alias="$candidate_2_alias" value="$candidate_2"/>
+            <Choice alias="$candidate_3_alias" value="$candidate_3"/>
+            <Choice alias="$candidate_4_alias" value="$candidate_4"/>
+        </Choices>
+        <Textarea name="resource_url" editable="true" maxSubmissions="1" showSubmitButton="true" toName="resource"/>
+    </View>
 </View>

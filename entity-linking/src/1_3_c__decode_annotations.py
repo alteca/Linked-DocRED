@@ -18,6 +18,10 @@ docred = read_docred(DOCRED_PATH)
 
 
 def main(annotation_file: str):
+    """Main Entrypoint
+    Args:
+        annotation_file (str): path to annotation file (exported from Label Studio)
+    """
     with open(annotation_file, "r", encoding="utf-8") as f:
         data = json.load(f)
 

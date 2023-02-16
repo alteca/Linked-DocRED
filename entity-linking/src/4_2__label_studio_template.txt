@@ -1,0 +1,23 @@
+<View style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 1em">
+    <View>
+        <Header name="title" value="$simplified_text"/>
+        <Header name="type" value="$entity_type"/>
+        <View name="examples">
+            <Repeater on="$examples" indexFlag="{{e_id}}" mode="list">
+                <View style="box-shadow: 1px 1px 4px;">
+                    <Hypertext name="example_{{e_id}}" value="$examples[{{e_id}}].text"/>
+                </View>
+            </Repeater>
+        </View>
+    </View>
+    <View style="box-shadow: 2px 2px 5px #999; padding: 20px; margin-top: 2em; border-radius: 5px;">
+        <Header value="Choose resource"/>
+        <Choices name="resource" toName="examples" choice="single" showInLine="true">
+            <Repeater on="$candidates" indexFlag="{{c_id}}" mode="list">
+                <Choice alias="$candidates[{{c_id}}].resource" value="$candidates[{{c_id}}].text"/>
+            </Repeater>
+            <Choice value="Other"/>
+        </Choices>
+        <Textarea name="resource_url" editable="true" maxSubmissions="1" toName="examples"/>
+    </View>
+</View>
