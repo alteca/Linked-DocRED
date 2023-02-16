@@ -1,0 +1,7 @@
+torch==1.12.1
+transformers==3.0.2
+opt-einsum==3.3.0
+numpy==1.19.4
+wandb
+ujson
+tqdm
