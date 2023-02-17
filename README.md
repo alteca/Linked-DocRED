@@ -22,6 +22,28 @@ The evaluation of a baseline shows promising results while highlighting the chal
 * [Baseline](baseline/)
 * [DocRED disambiguation process](entity-linking/)
 
+## License
+
+Linked-DocRED and the source code for the baseline, the metrics and the disambiguation process are licensed under the GPLv3 License. For more details, please refer to the [LICENSE.md file](LICENSE.md).
+
+```
+Linked-DocRED
+Copyright (C) 2023 Alteca.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+```
+
 ## Contact
 
 If you have questions using Linked-DocRED, please e-mail us at pygenest@alteca.fr.
