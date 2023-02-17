@@ -24,7 +24,7 @@ The evaluation of a baseline shows promising results while highlighting the chal
 
 ## License
 
-Linked-DocRED and the source code for the baseline, the metrics and the disambiguation process are licensed under the GPLv3 License. For more details, please refer to the [LICENSE.md file](LICENSE.md).
+Linked-DocRED and the source code for the baseline, the metrics, and the disambiguation process are licensed under the GPLv3 License. For more details, please refer to the [LICENSE.md file](LICENSE.md).
 
 ```
 Linked-DocRED
