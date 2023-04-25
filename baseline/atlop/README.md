@@ -27,7 +27,7 @@ python3 train.py --data_dir "$LINKED_DOCRED_PATH" --save_path "$SAVE_PATH" --tra
 ```
 
 where
-* `$LINKED_DOCRED_PATH`: path to Linked-DocRED dataset,
+* `$LINKED_DOCRED_PATH`: path to Linked-DocRED,
 * `$SAVE_PATH`: path to save the trained model,
 * `$NUM_CLASSES`: number of relations, `97` in the case of Linked-DocRED (96 relations + no relation).
 
@@ -40,6 +40,6 @@ python3 train.py --data_dir "$LINKED_DOCRED_PATH" --load_path "$SAVE_PATH" --tra
 ```
 
 where
-* `$LINKED_DOCRED_PATH`: path to Linked-DocRED dataset. Remember to add the predicted entities for the `dev` split file (file `dev_pred_entities.json`, produced by the NeuralCoref module),
+* `$LINKED_DOCRED_PATH`: path to Linked-DocRED. Remember to add the predicted entities for the `dev` split file (file `dev_pred_entities.json`, produced by the NeuralCoref module),
 * `$SAVE_PATH`: path to load the trained model,
 * `$NUM_CLASSES`: number of relations, `97` in the case of Linked-DocRED (96 relations + no relation).

@@ -1,4 +1,5 @@
 docred/
+.vscode/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,git,jupyternotebooks
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode,git,jupyternotebooks

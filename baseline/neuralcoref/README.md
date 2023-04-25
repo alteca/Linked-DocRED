@@ -33,6 +33,6 @@ python3 predict.py --data_dir "$LINKED_DOCRED_PATH" --entity_path "$PURE_ENTITIE
 ```
 
 where
-* `$LINKED_DOCRED_PATH`: path to Linked-DocRED dataset,
-* `$PURE_ENTITIES_PATH`: path to `ent_dev_pred.json` file outputed by PURE.
+* `$LINKED_DOCRED_PATH`: path to Linked-DocRED,
+* `$PURE_ENTITIES_PATH`: path to `ent_dev_pred.json` file output by PURE.
 * `$SAVE_DIR`: path to store predicted files. We are interested in the `dev_pred_entities.json` file.

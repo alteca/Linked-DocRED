@@ -44,7 +44,7 @@ Linked-DocRED follows a similar `json` format with DocRED. There are, however, s
 
 In DocRED, the annotation for relations has not been release for the `test` split. It allows the existence of a Codalab competition (see <https://github.com/thunlp/DocRED>).
 
-Our entity-linking process elicitated some errors and coreferences that were not identified in DocRED. These modifications makes our entity annotations incompatible with the Codalab competition. Therefore, only for the `test.json` file, we add a key `old-entities`, containing the initial DocRED entities (that are not modified), to allow a user to participate in the Codalab competition.
+Our entity-linking process elicited some errors and coreferences that were not identified in DocRED. These modifications makes our entity annotations incompatible with the Codalab competition. Therefore, only for the `test.json` file, we add a key `old-entities`, containing the initial DocRED entities (that are not modified), to allow a user to participate in the Codalab competition.
 
 ### Sample instance
 

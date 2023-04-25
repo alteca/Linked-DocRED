@@ -4,7 +4,7 @@ This folder contains the necessary source code to run the disambiguation process
 
 ## Requirements
 
-In order to run the disambiguation process, a working instance of *ElasticSearch* must have been setuped (see [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)). We have tested for ElasticSearch v8.6.
+In order to run the disambiguation process, a working instance of *ElasticSearch* must have been setup (see [ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)). We have tested for ElasticSearch v8.6.
 
 You also need to create a file named `.env`, that contains variables used by the Python scripts. You have to follow the template of `.env.example`.
 

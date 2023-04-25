@@ -8,7 +8,7 @@ The user shall execute the modules in the following order:
 * [ATLOP](atlop/) [[2]](#cite-2) (Relation Extraction),
 * [Entity-Linking](entity-linking/).
 
-*Warning: Each module has its own Python version and environment. The user shall install each environment separately.*
+*Warning: Each module has its own Python version and environment. The user should install each environment separately.*
 
 ## References
 

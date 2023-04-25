@@ -21,4 +21,4 @@ python3 -m pip install -r requirements.txt
 
 ## Expected format
 
-The tools to evaluate entity-linkings expect files (both ground truth and predictions) to be formatted in the same format as Linked-DocRED.
+The scripts to evaluate information extraction expect files (both ground truth and predictions) to be formatted in the same format as Linked-DocRED.

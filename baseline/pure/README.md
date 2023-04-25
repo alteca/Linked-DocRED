@@ -21,7 +21,7 @@ python3 prepare_dataset.py --input_dir="$LINKED_DOCRED_PATH" --output_dir="$LINK
 ```
 
 where
-* `$LINKED_DOCRED_PATH`: path to Linked-DocRED dataset,
+* `$LINKED_DOCRED_PATH`: path to Linked-DocRED,
 * `$LINKED_DOCRED_PREPRO`: output path to store preprocessed Linked-DocRED
 
 ## Training
