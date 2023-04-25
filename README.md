@@ -23,6 +23,7 @@ The evaluation of a baseline shows promising results while highlighting the chal
 * [Metrics](metrics/)
 * [Baseline](baseline/)
 * [DocRED disambiguation process](entity-linking/)
+* *[Linked-Re-DocRED data and format](Linked-Re-DocRED/)*
 
 ## License
 
