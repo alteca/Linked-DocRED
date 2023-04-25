@@ -58,7 +58,7 @@ Genest, Pierre-Yves, Pierre-Edouard Portier, Előd Egyed-Zsigmond, and Martino L
 @inproceedings{10.1145/3539618.3591912,
   title = {Linked-{{DocRED}} \textendash{} Enhancing {{DocRED}} with Entity-Linking to Evaluate {{End-To-End}} Document-Level Information Extraction Pipelines},
   booktitle = {Proceedings of the 46th {{International ACM SIGIR Conference}} on {{Research}} and {{Development}} in {{Information Retrieval}} ({{SIGIR}}'23)},
-  author = {Genest, Pierre-Yves and Portier, Pierre-Edouard and {Egyed-Zsigmond}, El{\H o}d and Lovisetto, Martino},
+  author = {Genest, Pierre-Yves and Portier, Pierre-Edouard and {Egyed-Zsigmond}, El\"{o}d and Lovisetto, Martino},
   year = {2023},
   pages = {11},
   publisher = {{Association for Computing Machinery}},
