@@ -1,6 +1,6 @@
 # Linked-DocRED
 
-Dataset, source code for the entity-linking annotation, the baseline and the metrics for the paper *"Linked-DocRED – Enhancing DocRED with Entity-Linking to Evaluate End-To-End Document-Level Information Extraction Pipelines"*.
+Dataset, source code for the entity-linking annotation, the baseline and the metrics for the paper [Linked-DocRED – Enhancing DocRED with Entity-Linking to Evaluate End-To-End Document-Level Information Extraction Pipelines](https://doi.org/10.1145/3539618.3591912).
 
 The dataset is located in the [Linked-DocRED/ folder](Linked-DocRED/). We hope Linked-DocRED will participate in discovering and developing more performant IE pipelines.
 
