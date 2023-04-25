@@ -48,6 +48,26 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 If you have questions using Linked-DocRED, please e-mail us at pygenest@alteca.fr.
 
+## Citation
+
+If you make use of Linked-DocRED or this code in your work, please kindly cite the following paper:
+
+Genest, Pierre-Yves, Pierre-Edouard Portier, Előd Egyed-Zsigmond, and Martino Lovisetto. “Linked-DocRED – Enhancing DocRED with Entity-Linking to Evaluate End-To-End Document-Level Information Extraction Pipelines.” In <i>Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR’23)</i>, 11. Taipei, Taiwan: Association for Computing Machinery, 2023. <a href="https://doi.org/10.1145/3539618.3591912">https://doi.org/10.1145/3539618.3591912</a>.
+
+```bibtex
+@inproceedings{genest2023,
+  title = {Linked-{{DocRED}} \textendash{} {{Enhancing DocRED}} with {{Entity-Linking}} to {{Evaluate End-To-End Document-Level Information Extraction Pipelines}}},
+  booktitle = {Proceedings of the 46th {{International ACM SIGIR Conference}} on {{Research}} and {{Development}} in {{Information Retrieval}} ({{SIGIR}}'23)},
+  author = {Genest, Pierre-Yves and Portier, Pierre-Edouard and {Egyed-Zsigmond}, El{\H o}d and Lovisetto, Martino},
+  year = {2023},
+  pages = {11},
+  publisher = {{Association for Computing Machinery}},
+  address = {{Taipei, Taiwan}},
+  doi = {10.1145/3539618.3591912},
+  isbn = {978-1-4503-9408-6},
+}
+```
+
 ## References
 
 <div class="csl-entry"><a name="cite-1"></a><b>[1]</b> Yao, Yuan, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, and Maosong Sun. “DocRED: A Large-Scale Document-Level Relation Extraction Dataset.” In <i>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</i>, 764–77. Florence, Italy: Association for Computational Linguistics, 2019. <a href="https://doi.org/10.18653/v1/p19-1074">https://doi.org/10.18653/v1/p19-1074</a>.</div>
