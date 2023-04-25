@@ -4,12 +4,14 @@ Dataset, source code for the entity-linking annotation, the baseline and the met
 
 The dataset is located in the [Linked-DocRED/ folder](Linked-DocRED/). We hope Linked-DocRED will participate in discovering and developing more performant IE pipelines.
 
+*We also propose the alternative dataset Re-Linked-DocRED, located in the [Re-Linked-DocRED/ folder](Re-Linked-DocRED/). It is based on Re-DocRED *[[1]](#cite-1)*, which is an improved version of DocRED.*
+
 ## Introduction
 
 Information Extraction (IE) pipelines aim to extract meaningful entities and relations from documents and structure them into a knowledge graph that can then be used in downstream applications. Training and evaluating such pipelines requires a dataset annotated with entities, coreferences, relations, and entity-linking. However, existing datasets either lack entity-linking labels, are too small, not diverse enough, or automatically annotated (that is, without a strong guarantee of the correction of annotations).
 
 Therefore, we propose **Linked-DocRED**, to the best of our knowledge, the first manually-annotated, large-scale, document-level IE dataset.
-We enhance the existing and widely-used DocRED *[[1]](#cite-1)* dataset with entity-linking labels that are generated thanks to a semi-automatic process that guarantees high-quality annotations. In particular, we use hyperlinks in Wikipedia articles to provide disambiguation candidates. *The dataset is located in the [Linked-DocRED folder](Linked-DocRED/). The source code for the disambiguation is accessible at [Disambiguation Process](entity-linking/)*.
+We enhance the existing and widely-used DocRED *[[2]](#cite-2)* dataset with entity-linking labels that are generated thanks to a semi-automatic process that guarantees high-quality annotations. In particular, we use hyperlinks in Wikipedia articles to provide disambiguation candidates. *The dataset is located in the [Linked-DocRED folder](Linked-DocRED/). The source code for the disambiguation is accessible at [Disambiguation Process](entity-linking/)*.
 
 We also propose a complete framework of metrics to benchmark end-to-end IE pipelines, and we define an entity-centric metric to evaluate entity-linking *(see [Metrics](metrics/))*.
 
@@ -70,4 +72,5 @@ Genest, Pierre-Yves, Pierre-Edouard Portier, Előd Egyed-Zsigmond, and Martino L
 
 ## References
 
-<div class="csl-entry"><a name="cite-1"></a><b>[1]</b> Yao, Yuan, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, and Maosong Sun. “DocRED: A Large-Scale Document-Level Relation Extraction Dataset.” In <i>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</i>, 764–77. Florence, Italy: Association for Computational Linguistics, 2019. <a href="https://doi.org/10.18653/v1/p19-1074">https://doi.org/10.18653/v1/p19-1074</a>.</div>
+<div class="csl-entry"><a name="cite-1"></a><b>[1]</b>Tan, Qingyu, Lu Xu, Lidong Bing, Hwee Tou Ng, and Sharifah Mahani Aljunied. “Revisiting DocRED - Addressing the False Negative Problem in Relation Extraction.” In <i>Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</i>, 8472–87. Abu Dhabi, United Arab Emirates: Association for Computational Linguistics, 2022. <a href="https://aclanthology.org/2022.emnlp-main.580">https://aclanthology.org/2022.emnlp-main.580</a>.</div>
+<div class="csl-entry"><a name="cite-2"></a><b>[2]</b> Yao, Yuan, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, and Maosong Sun. “DocRED: A Large-Scale Document-Level Relation Extraction Dataset.” In <i>Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics</i>, 764–77. Florence, Italy: Association for Computational Linguistics, 2019. <a href="https://doi.org/10.18653/v1/p19-1074">https://doi.org/10.18653/v1/p19-1074</a>.</div>

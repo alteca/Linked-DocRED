@@ -105,7 +105,7 @@ We provide a very simple code sample to load the Linked-DocRED dataset:
 import json
 
 def read_linked_docred_file(path: str) -> list:
-    """Read docred file
+    """Read Linked-DocRED file
     Args:
         path (str): path to file
     Returns:
@@ -119,14 +119,14 @@ def read_linked_docred_file(path: str) -> list:
 def read_linked_docred(linked_docred_path: str) -> dict:
     """Read entire dataset
     Args:
-        path (str): root path of linked docred dataset
+        path (str): root path of Linked-DocRED
     Returns:
-        dict: linked docred dataset
+        dict: Linked-DocRED dataset
     """
     return {
-        'dev': read_docred_file(f'{linked_docred_path}/dev.json'),
-        'test': read_docred_file(f'{linked_docred_path}/test.json'),
-        'train_annotated': read_docred_file(f'{linked_docred_path}/train_annotated.json')
+        'dev': read_linked_docred_file(f'{linked_docred_path}/dev.json'),
+        'test': read_linked_docred_file(f'{linked_docred_path}/test.json'),
+        'train_annotated': read_linked_docred_file(f'{linked_docred_path}/train_annotated.json')
     }
 
 linked_docred = read_linked_docred("<path to Linked-DocRED>")
