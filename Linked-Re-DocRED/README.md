@@ -134,4 +134,4 @@ for split, data in linked_re_docred.items():
 
 ## References
 
-<div class="csl-entry"><a name="cite-1"></a><b>[1]</b>Tan, Qingyu, Lu Xu, Lidong Bing, Hwee Tou Ng, and Sharifah Mahani Aljunied. “Revisiting DocRED - Addressing the False Negative Problem in Relation Extraction.” In <i>Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</i>, 8472–87. Abu Dhabi, United Arab Emirates: Association for Computational Linguistics, 2022. <a href="https://aclanthology.org/2022.emnlp-main.580">https://aclanthology.org/2022.emnlp-main.580</a>.</div>
+<div class="csl-entry"><a name="cite-1"></a><b>[1]</b> Tan, Qingyu, Lu Xu, Lidong Bing, Hwee Tou Ng, and Sharifah Mahani Aljunied. “Revisiting DocRED - Addressing the False Negative Problem in Relation Extraction.” In <i>Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing</i>, 8472–87. Abu Dhabi, United Arab Emirates: Association for Computational Linguistics, 2022. <a href="https://aclanthology.org/2022.emnlp-main.580">https://aclanthology.org/2022.emnlp-main.580</a>.</div>
