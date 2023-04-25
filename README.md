@@ -4,7 +4,7 @@ Dataset, source code for the entity-linking annotation, the baseline and the met
 
 The dataset is located in the [Linked-DocRED/ folder](Linked-DocRED/). We hope Linked-DocRED will participate in discovering and developing more performant IE pipelines.
 
-*We also propose the alternative dataset Re-Linked-DocRED, located in the [Re-Linked-DocRED/ folder](Re-Linked-DocRED/). It is based on Re-DocRED *[[1]](#cite-1)*, which is an improved version of DocRED.*
+*We also propose the alternative dataset Linked-Re-DocRED, located in the [Linked-Re-DocRED/ folder](Linked-Re-DocRED/). It is based on Re-DocRED *[[1]](#cite-1)*, which is an improved version of DocRED.*
 
 ## Introduction
 
