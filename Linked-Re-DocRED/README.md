@@ -7,7 +7,7 @@ Therefore, DocRED is precise (entity and relation annotations are correct) but i
 This incompleteness has a negative impact during training and evaluation.
 
 Re-DocRED [[1]](#cite-1) addresses this shortcoming, by complementing relation annotations. In practice, it doubles the number of relations of the dataset (from 57k to 121k).
-The authors observed a positive impact Re-DocRED on the performance of RE models.
+The authors observed a positive impact on the performance of RE models when using Re-DocRED instead of DocRED.
 
 Linked-Re-DocRED is the fusion between Re-DocRED and Linked-DocRED. It contains the complementary relation annotations of Re-DocRED with the entity-linking annotations of Linked-DocRED.
 
